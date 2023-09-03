@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/**/
+
+/*<body class="grid-container"><!--contenedor de rejilla -->
+    <header class="header">HEADER</header><!-- encabezado -->
+    <nav class="navbar">NAVBAR</nav><!--barra de navegación -->
+    <aside class="sidebar">SIDEBAR</aside><!-- BARRA LATERAL-->
+    <article class="main">MAIN</article><!--PRINCIPAL -->
+    <footer class="footer">FOOTER</footer><!--PIE DE PÁGINA -->*/
+
+
+    /*contenedor de rejilla*/
+.grid-container >*{/*grid-contenedor*/
+    box-shadow: -1px 1px 7px 0px #E6B0AA;/*sombra de caja*/
+    border-radius: 4px;/* borde-radio*/
+    padding: 10px;/*  relleno*/
+    text-align: center;/*   alineación de texto: centro*/
+    
+}
+
+/*encabezado*/
+
+.header {
+    /* GRID: permitir dividir una página en áreas 
+    o regiones principales, por definir la relación en términos de tamaño, posición 
+    y capas entre partes de un control construido a partir de primitivas HTML.
+    https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout*/
+    grid-area: header;/*área de cuadrícula*/
+    background-color: #E6B0AA;/*color de fondo: rgb*/
+}
+
+/*barra de navegación*/
+
+
+/*BARRA LATERAL*/
+.sidebar {
+    grid-area: sidebar;/**/
+    background-color: #FADBD8;/**/
+}
+
+/*PRINCIPAL*/
+.main {
+    grid-area: main;/**/
+    background-color: #E8DAEF;/**/
+}
+
+/*PIE DE PÁGINA*/
+.footer {
+    grid-area: footer;/**/
+    background-color: rgb(34, 19, 14);/**/
+}
+
+/*contenedor de rejilla*/
+.grid-container {
+    display: grid; /*pantalla: cuadrícula*/
+    gap: 10px;/*espacio*/
+    grid-template-areas: /* cuadrícula-plantilla-áreas*/
+        "header"/*encabezado*/
+        "navbar"/*barra de navegación*/
+        "main"/*principal*/
+        "sidebar"/*barra lateral*/
+        "footer"/*pie de página*/
+        ;
+}
+/*@media (ancho mínimo*/
+@media (min-width: 400px){
+.grid-container {/*grid-contenedor */
+    grid-template: /*plantilla de cuadrícula*/
+        "header header" 680px /*encabezado encabezado*/   
+        "sidebar main" 300px/**/
+        "sidebar main" 200px/**/
+        "footer footer" 100px //**/
+        200px auto;/*automático*/
+}
+}
+/*@media (ancho mínimo*/
+@media (min-width: 1080px){
+    .grid-container {/**/
+        grid-template: /**/
+            "header  header header" 450px /**/   
+            "main main sidebar" 520px/**/
+            "footer footer footer" 150px / /**/
+            200px auto 200px;/**/
+    }
+    }
+
+    /* imagenes del footer */
+
+    .footer img{
+        width: 40px; ;
+        height: 40px; ;
+        border-radius: 3,5;
+        margin: 10px;
+        
+    }
+   
+/*(Barra lateral ) sidebar " menu" */
+
+menu {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color:black;
+    display: block;
+    border-radius: 15px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.m1 {
+    font-size: 19px;
+    color: black;
+    border-radius: 0 12px 0 0;
+    text-align: center;
+    padding: 8%;
+    list-style: none;
+}
+
+.m1:hover {
+    background-color:white;
+    color: #78281F;
+    list-style: none;
+}
+
+.m2 {
+    font-size: 19px;
+    color: black;
+    border-radius: 0 12px 0 0;
+    margin-top: 10px;
+    padding: 10%;
+    text-align: center;
+    list-style: none;
+}
+
+.m2:hover {
+    background-color: white;
+    color: #78281F;
+    list-style: none;
+}
+
+.m3 {
+    font-size: 19px;
+    color:black;
+    border-radius: 0 12px 0 0;
+    margin-top: 10px;
+    padding: 10%;
+    text-align: center;
+    list-style: none;
+}
+
+.m3:hover {
+    background-color: white;
+    color: #78281F;
+    list-style: none;
+}
+
+.m4 {
+    font-size: 19px;
+    color: black;
+    border-radius: 0 12px 0 0;
+    margin-top: 10px;
+    padding: 10%;
+    text-align: center;
+    list-style: none;
+}
+
+.m4:hover {
+    background-color: white;
+    color: #78281F;
+    list-style: none;
+}
+
+.m5 {
+    font-size: 19px;
+    color: black;
+    border-radius: 0 12px 0 0;
+    margin-top: 10px;
+    padding: 9%;
+    text-align: center;
+    
+}
+
+.m5:hover {
+    background-color: white;
+    color: #78281F;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* agregar 2 partes al main*/
+
+.main {
+    display: grid; /* creando una grilla;  se hacen los cuadros grandes*/
+    grid-template-columns:50% 50% ;/* abarcan una colomna al lado de la otra*/
+    gap: 1em ;
+    
+
+}
+
+/* imagenes del main*/
+
+
+.main img {
+    width: 300px;
+    height: 300px;
+    border-radius: 3em;
+}
+/* parrafo*/
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+
+}
